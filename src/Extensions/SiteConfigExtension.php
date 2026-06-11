@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanPotter\SilverStripeCMSTheme\Extensions;
+namespace StevenPaw\SilverStripeCMSBackendTheme\Extensions;
 
 use SilverStripe\Forms\FormField;
 use SilverStripe\Assets\Image;
@@ -16,7 +16,7 @@ use SilverStripe\SiteConfig\SiteConfig;
 
 /**
  * Class SiteConfigExtension
- * @package RyanPotter\SilverStripeCMSTheme\Extensions
+ * @package StevenPaw\SilverStripeCMSBackendTheme\Extensions
  * @property SiteConfig $owner
  */
 class SiteConfigExtension extends Extension
@@ -57,7 +57,7 @@ class SiteConfigExtension extends Extension
                     )
                         ->setAllowedFileCategories('image/supported')
                         ->setFolderName('Uploads/cms-branding')
-                        ->setRightTitle(_t(self::class . '.LOGODESCRIPTIOM', 'Logo displayed in the top left-hand side of the CMS menu.')),
+                        ->setRightTitle(_t(self::class . '.LOGODESCRIPTION', 'Logo displayed in the top left-hand side of the CMS menu.')),
                 ]
             );
         }

@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanPotter\SilverstripeCMSTheme\Extensions;
+namespace StevenPaw\SilverStripeCMSBackendTheme\Extensions;
 
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Core\Convert;
@@ -13,7 +13,7 @@ use SilverStripe\ORM\FieldType\DBField;
 /**
  * Class GroupedCmsMenu
  *
- * @package RyanPotter\SilverstripeCMSTheme\Extensions
+ * @package StevenPaw\SilverStripeCMSBackendTheme\Extensions
  * @property LeftAndMain $owner
  */
 class GroupedCmsMenu extends Extension

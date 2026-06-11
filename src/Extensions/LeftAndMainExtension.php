@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanPotter\SilverStripeCMSTheme\Extensions;
+namespace StevenPaw\SilverStripeCMSBackendTheme\Extensions;
 
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Core\Config\Config;
@@ -9,7 +9,7 @@ use SilverStripe\View\Requirements;
 
 /**
  * Class LeftAndMainExtension
- * @package RyanPotter\SilverStripeCMSTheme\Extensions
+ * @package StevenPaw\SilverStripeCMSBackendTheme\Extensions
  * @property LeftAndMain $owner
  */
 class LeftAndMainExtension extends Extension
@@ -27,9 +27,9 @@ class LeftAndMainExtension extends Extension
     $cms_drawer_background = $config->cms_drawer_background ?: '#1a3e88';
     $cms_drawer_color = $config->cms_drawer_color ?: 'currentColor';
     $cms_icon_color = $config->cms_icon_color ?: 'currentColor';
-    Requirements::insertHeadTags('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">','cms-theme-font-awesome');
-    Requirements::css('ryanpotter/silverstripe-cms-theme:dist/main.css');
-    Requirements::javascript('ryanpotter/silverstripe-cms-theme:dist/bundle.js');
+    Requirements::insertHeadTags('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">','cms-backend-theme-font-awesome');
+    Requirements::css('stevenpaw/silverstripe-cms-backend-theme:dist/main.css');
+    Requirements::javascript('stevenpaw/silverstripe-cms-backend-theme:dist/bundle.js');
     Requirements::customCSS(
       '.cms-mobile-menu-toggle {background: ' . $cms_background . ' !important; color: ' . $cms_color . ' !important;}' .
       '.cms-mobile-menu-toggle.cms-mobile-menu-toggle--open {background: ' . $cms_active_background . ' !important; color: ' . $cms_active_color . ' !important;}'
@@ -122,6 +122,6 @@ class LeftAndMainExtension extends Extension
    */
   public function ShowCMSInfo()
   {
-    return (bool) Config::inst()->get(LeftAndMain::class, 'show_cms_info');
+    return (bool) LeftAndMain::config()->get('show_cms_info');
   }
 }

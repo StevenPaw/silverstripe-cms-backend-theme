@@ -1,13 +1,11 @@
 ---
-Name: ryanpotter-silverstripe-cms-theme
+Name: stevenpaw-silverstripe-cms-backend-theme
 ---
 SilverStripe\Admin\LeftAndMain:
   extensions:
-    - RyanPotter\SilverStripeCMSTheme\Extensions\LeftAndMainExtension
-    - RyanPotter\SilverStripeCMSTheme\Extensions\GroupedCmsMenu
-  # Set to true to show CMS info panel (toggle button, sticky status, etc.)
-  show_cms_info: false
+    - StevenPaw\SilverStripeCMSBackendTheme\Extensions\LeftAndMainExtension
+    - StevenPaw\SilverStripeCMSBackendTheme\Extensions\GroupedCmsMenu
 
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - RyanPotter\SilverStripeCMSTheme\Extensions\SiteConfigExtension
+    - StevenPaw\SilverStripeCMSBackendTheme\Extensions\SiteConfigExtension

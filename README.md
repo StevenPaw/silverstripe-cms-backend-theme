@@ -33,6 +33,7 @@ You can either choose to upload a CMS logo through the Site Settings section of 
 SilverStripe\SiteConfig\SiteConfig:
   cms_logo: 'path/to/your/image.png'
   cms_logo_width: 100 # Optional width constraint
+  show_cms_info: true # Set to true to show CMS info panel (toggle button, sticky status, etc.)
 ```
 
 You can set the theme colour of the left menu by defining it through a YML configuration like the below:
