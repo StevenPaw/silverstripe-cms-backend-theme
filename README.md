@@ -3,9 +3,9 @@
 A configurable theme to brand your backend and make the LeftAndMain-Part of the backend more modern.
 Updated for Silverstripe CMS 6.2
 
-[![Latest Stable Version](https://poser.pugx.org/ryanpotter/silverstripe-cms-theme/v/stable)](https://packagist.org/packages/ryanpotter/silverstripe-cms-theme)
-[![Total Downloads](https://poser.pugx.org/ryanpotter/silverstripe-cms-theme/downloads)](https://packagist.org/packages/ryanpotter/silverstripe-cms-theme)
-[![Monthly Downloads](https://poser.pugx.org/ryanpotter/silverstripe-cms-theme/d/monthly)](https://packagist.org/packages/ryanpotter/silverstripe-cms-theme)
+[![Latest Stable Version](https://poser.pugx.org/stevenpaw/silverstripe-cms-backend-theme/v/stable)](https://packagist.org/packages/stevenpaw/silverstripe-cms-backend-theme)
+[![Total Downloads](https://poser.pugx.org/stevenpaw/silverstripe-cms-backend-theme/downloads)](https://packagist.org/packages/stevenpaw/silverstripe-cms-backend-theme)
+[![Monthly Downloads](https://poser.pugx.org/stevenpaw/silverstripe-cms-backend-theme/d/monthly)](https://packagist.org/packages/stevenpaw/silverstripe-cms-backend-theme)
 
 The theme supports an UploadField in the *Settings > Settings Tab > CMS Tab* for a logo to be displayed in the left-hand menu of the CMS.
 
