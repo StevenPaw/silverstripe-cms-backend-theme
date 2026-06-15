@@ -1,6 +1,6 @@
 <div class="cms-mobile-menu-toggle-wrapper"></div>
 
-<div class="fill-height cms-menu" id="cms-menu" data-layout-type="border" aria-expanded="false">
+<div class="fill-height cms-menu cms-panel cms-panel-layout" id="cms-menu" data-layout-type="border" aria-expanded="false">
 	<div class="cms-menu__header">
 		<% include SilverStripe\\Admin\\LeftAndMain_MenuLogo %>
 		<% include SilverStripe\\Admin\\LeftAndMain_MenuStatus %>
@@ -10,12 +10,26 @@
 		<% include SilverStripe\\Admin\\LeftAndMain_MenuList %>
 	</div>
 
-  <!-- Activate show_cms_info: true in LeftAndMain config to display CMS info button -->
-	<% if $ShowCMSInfo %>
-    <div class="toolbar toolbar--south cms-panel-toggle">
-      <% include SilverStripe\\Admin\\LeftAndMain_MenuToggle %>
-    </div>
-	<% end_if %>
+	<div class="toolbar toolbar--south cms-panel-toggle">
+		<% if $ShowCMSInfo %>
+			<% include SilverStripe\\Admin\\LeftAndMain_MenuToggle %>
+		<% else %>
+			<% if $MenuCollapsible %>
+				<button
+					class="cms-panel-toggle__button"
+					type="button"
+					title="<%t SilverStripe\\Admin\\LeftAndMain.CollapsePanel "Collapse panel" %>"
+					data-bs-toggle="tooltip"
+					aria-expanded="true"
+					aria-controls="cms-menu"
+					data-expanded-label="&laquo;"
+					data-expanded-title="<%t SilverStripe\\Admin\\LeftAndMain.CollapsePanel "Collapse panel" %>"
+					data-collapsed-label="&raquo;"
+					data-collapsed-title="<%t SilverStripe\\Admin\\LeftAndMain.ExpandPanel "Expand panel" %>"
+				>&laquo;</button>
+			<% end_if %>
+		<% end_if %>
+	</div>
 </div>
 
 <button class="fill-height fill-width cms-menu-mobile-overlay" aria-controls="cms-menu" aria-expanded="false"></button>

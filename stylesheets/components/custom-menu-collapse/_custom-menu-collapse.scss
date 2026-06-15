@@ -1,0 +1,91 @@
+/**
+ * Custom menu collapse/expand functionality
+ * Uses custom-collapsed class instead of Silverstripe's collapsed class
+ */
+
+#cms-menu.custom-collapsed {
+    width: 75px !important;
+    
+    .cms-menu__header,
+    .cms-panel-content {
+        overflow: hidden;
+    }
+
+    .cms-sitename {
+        padding: 10px;
+    }
+
+    .cms-help__toggle {
+        display: none !important;
+    }
+    
+    .cms-menu__header {
+        width: 75px !important;
+        min-height: 60px;
+    }
+    
+    .cms-login-status,
+    .text,
+    .cms-menu__list li a .text,
+    .toggle-children {
+        display: none !important;
+    }
+    
+    .cms-menu__list li a,
+    .branded-menu--child a {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        text-align: center;
+    }
+    
+    .menu__icon {
+        //margin-right: 0 !important;
+    }
+    
+    // Make sure the toggle button stays visible and centered
+    .cms-panel-toggle {
+        text-align: center;
+        
+        .cms-panel-toggle__button {
+            display: inline-block !important;
+            visibility: visible !important;
+        }
+    }
+
+    .branded-menu__list-item {
+        background-color: red !important;
+        &.branded-menu__list-item--children {
+            .menu__icon--chevron {
+                right: 0.5rem;
+            }
+        }
+    }
+
+    .branded-menu--child .branded-menu__list-item {
+        a {
+            padding: 1.8rem 0 !important;
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+// Smooth transitions
+#cms-menu {
+  transition: width 0.3s ease;
+  
+  .cms-menu__header,
+  .text {
+    transition: opacity 0.2s ease;
+  }
+}
+
+// Adjust content area when menu is collapsed
+#cms-menu.custom-collapsed ~ .cms-content,
+#cms-menu.custom-collapsed ~ * .cms-content {
+  margin-left: 40px !important;
+}
+
+.cms-panel-toggle__button {
+    right: 20px;
+}

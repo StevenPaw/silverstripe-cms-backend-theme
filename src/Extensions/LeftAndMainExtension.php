@@ -124,4 +124,15 @@ class LeftAndMainExtension extends Extension
   {
     return (bool) LeftAndMain::config()->get('show_cms_info');
   }
+
+  /**
+   * Check if the CMS menu should be collapsible
+   * @return bool
+   */
+  public function MenuCollapsible()
+  {
+    $config = LeftAndMain::config()->get('menu_collapsible');
+    // Default to false if not explicitly set (menu always expanded)
+    return $config === true;
+  }
 }

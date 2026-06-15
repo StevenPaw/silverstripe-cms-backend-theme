@@ -33,7 +33,6 @@ You can either choose to upload a CMS logo through the Site Settings section of 
 SilverStripe\SiteConfig\SiteConfig:
   cms_logo: 'path/to/your/image.png'
   cms_logo_width: 100 # Optional width constraint
-  show_cms_info: true # Set to true to show CMS info panel (toggle button, sticky status, etc.)
 ```
 
 You can set the theme colour of the left menu by defining it through a YML configuration like the below:
@@ -50,8 +49,11 @@ SilverStripe\Admin\LeftAndMain:
   cms_drawer_background: '#1a3e88'
   cms_drawer_color: currentColor
   cms_icon_color: currentColor
-  show_cms_info: true
+  menu_collapsible: true # Set to true to enable menu collapse/expand button (default: false - always expanded)
+  show_cms_info: true # Set to true to show full CMS info panel (Help menu, sticky toggle, etc.)
 ```
+
+**Note:** By default, the menu is always expanded without a toggle button. Set `menu_collapsible: true` to enable the collapse/expand toggle button. If you set `show_cms_info: true`, you'll get the full menu toggle panel including help menu and sticky navigation toggle.
 
 ## Grouping CMS Menus
 
