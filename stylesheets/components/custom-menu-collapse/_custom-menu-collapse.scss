@@ -31,15 +31,18 @@
         display: none !important;
     }
     
-    .cms-menu__list li a,
+    .cms-menu__list li > a,
     .branded-menu--child a {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        text-align: center;
+        height: 75px !important;
+        min-height: 0 !important;
+        padding: 0 !important;
     }
-    
-    .menu__icon {
-        //margin-right: 0 !important;
+
+    .menu__icon:not(.menu__icon--chevron) {
+        width: 2rem;
+        height: 2rem;
+        // center in the 75px menu: (75px - icon-width 2rem) / 2
+        left: calc(100% / 2 - 1rem) !important;
     }
     
     // Make sure the toggle button stays visible and centered
@@ -61,13 +64,6 @@
         }
     }
 
-    .branded-menu--child .branded-menu__list-item {
-        a {
-            padding: 1.8rem 0 !important;
-            display: block;
-            text-align: center;
-        }
-    }
 }
 
 // Applied synchronously via inline <head> script before body renders — prevents flash on page load
@@ -79,7 +75,11 @@ html.cms-pre-collapsed #cms-menu {
 // Smooth transitions
 #cms-menu {
   transition: width 0.3s ease;
-  
+
+  .menu__icon {
+    transition: none;
+  }
+
   .cms-menu__header,
   .text {
     transition: opacity 0.2s ease;
