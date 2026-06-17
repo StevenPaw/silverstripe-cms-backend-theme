@@ -19,6 +19,8 @@
     }
 
     updateButtonState($menu);
+    // Re-sync after Silverstripe's entwine may have reset the button
+    setTimeout(function() { updateButtonState($menu); }, 0);
 
     // Hand off from the pre-collapsed CSS class (set inline in <head>) to our JS-driven class
     document.documentElement.classList.remove('cms-pre-collapsed');
