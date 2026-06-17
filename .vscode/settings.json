@@ -1,5 +1,6 @@
 {
     "chat.tools.terminal.autoApprove": {
         "yarn install": true
-    }
+    },
+    "intelephense.environment.phpVersion": "8.3"
 }

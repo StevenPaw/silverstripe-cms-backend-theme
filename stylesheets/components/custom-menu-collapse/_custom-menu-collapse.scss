@@ -70,6 +70,12 @@
     }
 }
 
+// Applied synchronously via inline <head> script before body renders — prevents flash on page load
+html.cms-pre-collapsed #cms-menu {
+    width: 75px !important;
+    overflow: hidden;
+}
+
 // Smooth transitions
 #cms-menu {
   transition: width 0.3s ease;
@@ -80,11 +86,6 @@
   }
 }
 
-// Adjust content area when menu is collapsed
-#cms-menu.custom-collapsed ~ .cms-content,
-#cms-menu.custom-collapsed ~ * .cms-content {
-  margin-left: 40px !important;
-}
 
 .cms-panel-toggle__button {
     right: 20px;

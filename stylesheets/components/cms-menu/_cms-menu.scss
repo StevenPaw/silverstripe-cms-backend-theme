@@ -27,6 +27,10 @@ $cms-menu-width: 18.4rem;
     padding-left: 2rem;
   }
 
+  .cms-menu__list li.opened .menu__icon:not(.menu__icon--chevron) {
+    left: 2rem;
+  }
+
   .cms-menu__list .branded-menu__list-item.opened .branded-menu--child a {
     padding-left: 2.5rem;
   }

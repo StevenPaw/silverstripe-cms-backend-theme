@@ -11,15 +11,31 @@
   $(document).ready(function() {
     const savedState = localStorage.getItem(STORAGE_KEY);
     const $menu = $(MENU_SELECTOR);
-    
+
     if (savedState === 'collapsed') {
       $menu.addClass(COLLAPSED_CLASS);
     } else if (savedState === 'expanded') {
       $menu.removeClass(COLLAPSED_CLASS);
     }
-    
-    // Update button state
+
     updateButtonState($menu);
+
+    // Hand off from the pre-collapsed CSS class (set inline in <head>) to our JS-driven class
+    document.documentElement.classList.remove('cms-pre-collapsed');
+
+    // Prevent Silverstripe's panel system from adding its native 'collapsed' class to #cms-menu.
+    // Silverstripe calls togglePanel(false) when loading the page editor, which would conflict
+    // with our custom-collapsed mechanism.
+    const menuEl = document.querySelector(MENU_SELECTOR);
+    if (menuEl) {
+      new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.target.classList.contains('collapsed')) {
+            mutation.target.classList.remove('collapsed');
+          }
+        });
+      }).observe(menuEl, { attributes: true, attributeFilter: ['class'] });
+    }
   });
   
   // Intercept parent menu item clicks while collapsed — toggle submenu instead of navigating

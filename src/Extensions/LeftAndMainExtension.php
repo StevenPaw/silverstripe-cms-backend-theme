@@ -28,6 +28,7 @@ class LeftAndMainExtension extends Extension
     $cms_drawer_color = $config->cms_drawer_color ?: 'currentColor';
     $cms_icon_color = $config->cms_icon_color ?: 'currentColor';
     Requirements::insertHeadTags('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">','cms-backend-theme-font-awesome');
+    Requirements::insertHeadTags('<script>try{if(localStorage.getItem("custom-cms-menu-state")==="collapsed"){document.documentElement.classList.add("cms-pre-collapsed");}}catch(e){}</script>', 'cms-backend-theme-menu-state-init');
     Requirements::css('stevenpaw/silverstripe-cms-backend-theme:dist/main.css');
     Requirements::javascript('stevenpaw/silverstripe-cms-backend-theme:dist/bundle.js');
     Requirements::customCSS(
@@ -77,7 +78,8 @@ class LeftAndMainExtension extends Extension
     Requirements::customCSS(
       '.cms-menu .cms-panel-toggle {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important; border-color: ' . $cms_border_color . ' !important;-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
       '.cms-panel .cms-panel-toggle .toggle-collapse span, .cms-panel .cms-panel-toggle .toggle-expand span {color: ' . $cms_color . ' !important}' .
-      '.cms-menu .sticky-status-indicator {color: ' . $cms_color . ' !important}'
+      '.cms-menu .sticky-status-indicator {color: ' . $cms_color . ' !important}' .
+      '.cms-panel .cms-panel-toggle .cms-panel-toggle__button {color: ' . $cms_color . ' !important}'
     );
 
     // Icons
