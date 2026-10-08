@@ -1,0 +1,23 @@
+/*
+|--------------------------------------------------------------------------
+| CMS Subsites
+|--------------------------------------------------------------------------
+*/
+
+$cms-subsites-color: #43536d;
+
+// The menu header color (and its spans) is forced via customCSS with !important,
+// which leaks into the white subsite dropdown. Reset it for the switcher.
+.cms .cms-menu__header .cms-subsites {
+  color: $cms-subsites-color !important;
+
+  span,
+  select,
+  .chosen-results li {
+    color: $cms-subsites-color !important;
+  }
+
+  .chosen-results li.highlighted {
+    color: #fff !important;
+  }
+}
