@@ -47,7 +47,10 @@ class LeftAndMainExtension extends Extension
       '.cms-help__link {background-color: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important; border-color: ' . $cms_border_color . ' !important;}' .
       '.cms-help__caret {color: ' . $cms_color . ' !important;}' .
       '.cms-login-status .cms-login-status__profile-link:focus, .cms-login-status .cms-login-status__profile-link:hover, .cms-login-status .cms-login-status__profile-link:focus span, .cms-login-status .cms-login-status__profile-link:hover span {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
-      '.cms-login-status .cms-login-status__logout-link:focus, .cms-login-status .cms-login-status__logout-link:hover {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}'
+      '.cms-login-status .cms-login-status__logout-link:focus, .cms-login-status .cms-login-status__logout-link:hover {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
+      // Subsites dropdown has a light background and must not inherit cms_color
+      '.cms-subsites select, .cms-subsites .chosen-container, .cms-subsites .chosen-container .chosen-single, .cms-subsites .chosen-container .chosen-results li {color: #43536d !important;}' .
+      '.cms-subsites .chosen-container .chosen-results li.highlighted {color: #fff !important;}'
     );
 
     // Menu List
